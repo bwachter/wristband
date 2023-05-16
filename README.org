@@ -1,0 +1,19 @@
+[[./wristband.png]]
+
+A simple watch wristband, should work well with pretty much any flexible filament.
+
+Default size of one link is 4mm - should be trivial to adjust, but currently there's a hack on one side of the links which may blow up for different link sizes.
+
+For building your own stuff you can use the individual modules:
+
+- half_link is half a link
+- link is a full link, composed of two half links
+- watch_link connects to the watch via standard watch lugs
+
+Typically you'd probably just call =wristband()=, which takes the arguments links, height and optional rod_thickness.
+
+Measure your wrist, subtract length of the watch, divide the measured mm by 4, and use that as number of links - take into account that there are 2 additional links for the mounting on top of that.
+
+Measure the space available for the wristband, and set that as height.
+
+If you have very thin or thick lugs adjust the rod_thickness parameter, which defaults to 1.6.
